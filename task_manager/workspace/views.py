@@ -40,10 +40,8 @@ class ListCreateWorkspaceApiView(generics.ListCreateAPIView):
             "description": request.data.get('description'),
             "user": request.user.id
         }
-
         if request.data.get('image') is not None:
             data['image'] = request.data.get('image')
-
         serializer = self.get_serializer(data=data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)

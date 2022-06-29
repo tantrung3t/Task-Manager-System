@@ -18,6 +18,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 # Create your views here.
 from . import serializers
 from . import models
+from . import paginations
 from workspace.permissions import IsOwnerWorkspace
 from .permissions import IsTaskOfWorkspace
 
@@ -30,6 +31,7 @@ class TaskApiView(generics.ListCreateAPIView):
     # search_fields = ['task_end', 'task_status__status_name']
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['task_name', 'task_status__id', 'task_end']
+    pagination_class = paginations.PagePagination
 
     def get_queryset(self):
         self.queryset = models.Task.objects.filter(workspace=self.kwargs['workspace_id'])

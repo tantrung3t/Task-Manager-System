@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-tj9wt@gvw(jbaj4cd9_9g5gt--lf+z^u=d^-#$y@9nm@2l@xyd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['taskmanagersystem.herokuapp.com', '.localhost', '127.0.0.1',]
 
 
 # Application definition
@@ -146,6 +146,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 't2kpetshop@gmail.com'
-EMAIL_HOST_PASSWORD = 'daocddqlzkqvpuvv'
+EMAIL_HOST_PASSWORD = 'epzethbdcqghtbhh'
 
 

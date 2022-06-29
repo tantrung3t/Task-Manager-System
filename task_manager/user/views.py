@@ -47,7 +47,7 @@ class RegisterApiView(generics.CreateAPIView):
         serializer = ModeSerializer(data=mode)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        #
+        
         refresh = tokens.RefreshToken.for_user(self.user)
         refresh['email'] = request.data['email']
         data = {
